@@ -1,0 +1,18 @@
+{
+  "name": "docker-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker": "docker run --name docker-fun -e NODE_ENV=development -it -p 80:3000 -p 8080:8080 -p 9229:9229 -p 1235:1235 docker-fun bash",
+    "docker-build": "docker build -t docker-fun . -f DockerFile",
+    "dockers": "docker exec -it docker-fun bash",
+    "start": "node r esm ./app/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
